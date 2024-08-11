@@ -1,18 +1,14 @@
 
-// store redux
-
 import { configureStore } from "@reduxjs/toolkit";
 
-
-import counterSlice from "./ConterSlice"
-import blogSlice from "./blogSlice"
+import AuthReducer from "./Authentication";
+import BookReducer from "./BooKslice";
 const store = configureStore({
-
-    reducer : {
-        counter : counterSlice,
-        blog  : blogSlice
+    reducer: {
+         auth : AuthReducer,
+         book : BookReducer
     }
 })
 
 
-export default store
+export default store;
